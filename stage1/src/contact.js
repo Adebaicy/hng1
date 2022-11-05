@@ -12,22 +12,27 @@ const Contact = () => {
         <p id="hi">
           Hi there, contact me to ask me about anything you have in mind
         </p>
-        <form>
+
+        
+        <form >
           <div>
             <div className="tt">
               <div className="top">
-                <label htmlFor="first_name">First name</label>
+                <label htmlFor="first_name" className="form-label">First name</label>
                 <br />
                 <input
+                required
+                className="form-control"
                   type="text"
                   id="first_name"
                   placeholder="Enter your first name"
                 ></input>
+                <div className="valid-feedback">ss</div>
                 <br />
-                <br />
+                <span><br /></span>
               </div>
 
-              <div class="top">
+              <div className="top">
                 <label htmlFor="last_name">Last name</label>
                 <br />
                 <input
@@ -51,10 +56,11 @@ const Contact = () => {
 
             <label htmlFor="message">Message</label>
             <br />
-            <textarea
+            <textarea required className="form-control"
               id=" message"
               placeholder="Send me a message and I'll reply as soon as possible..."
             ></textarea>
+            <div className="valid-feedback">Please, enter a message</div>
           </div>
           <br />
 
@@ -68,9 +74,11 @@ const Contact = () => {
               You agree to providing your data to Adebaicy who may contact you
             </label>
           </div>
+
+
           <br />
-          <button id="sendit">
-            <a>Send message</a>
+          <button type="submit" id="sendit">
+            Send message
           </button>
         </form>
       </div>
